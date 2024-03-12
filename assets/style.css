@@ -1,0 +1,674 @@
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* asterisk wildcard selector */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 500;
+}
+
+/* General sytles */
+
+body {
+    /* Push footer down to bottom of page */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Hide scroll arrow for any display but large sizes */
+.hide-text {
+    /* Mentor Akshat helped me with understading .parent - .child relations for styling */
+    color: orange;
+    font-size: 1.5rem;
+    color: orange;
+    /* Add Border around headings */
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgba(59, 59, 59, 0.7);
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    /* Next line was shown to me by Akshat */
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+/* Make input fields have padding */
+input {
+    padding: 4px;
+}
+
+/* Hide headings */
+.hide {
+    display: none;
+}
+
+/* Adjust bold font-size */
+b {
+    font-weight: 900;
+}
+
+/* Style list items */
+li {
+    list-style-type: none;
+    padding: 5px;
+}
+.background-color {
+    background-image: none;
+    background-color:  rgba(59, 59, 59, 0.3);
+}
+
+/* Placeholder */
+::placeholder {
+    text-align: center;
+}
+
+#form7 ::placeholder {
+    padding-top: 1rem;
+}
+
+/* Header */
+header {
+    background-color: orange;
+    color: rgb(59, 59, 59);
+    z-index: 100;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    padding: 10px 20px 15px 20px;
+    box-shadow: 0 1px 0 0 black;
+}
+
+/* Delete link properties */
+header a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Drop down menu properties */
+#nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin: 1rem;
+}
+
+/* Hide list dots */
+#nav-menu>li {
+    list-style-type: none;
+}
+
+/* Set current page indicator */
+.current {
+    border-bottom: 1px solid black;
+}
+
+/* Copied from Love Running and adjusted to new needs */
+/* Navbar styles with dropdown toggle */
+nav {
+    position: absolute;
+    background-color: orange;
+    /* Width for small screens */
+    width: 100%;
+    right: 0;
+    padding: 0 1rem;
+    display: none;
+    top: 69px;
+    box-shadow: 0 1px 0 0 black;
+}
+
+/* Nav toggle */
+#nav-box:checked~nav {
+    display: block;
+}
+
+/* End of copied text */
+
+#nav-box {
+    display: none;
+}
+
+/* Burger icon position */
+.nav-box-label {
+    position: absolute;
+    margin: 12px 2rem;
+    right: 0;
+    top: 0;
+    font-size: 200%;
+}
+
+/* Main content */
+main {
+    background-color: #f5f5f5;
+    flex: 1 0 auto;
+    margin-top: 69px;
+    /* Background picture for rest of page */
+    background: url("../images/sincerely-media-hbOpyBjUBjc-unsplash.jpg") no-repeat center -150px/cover;
+}
+
+.hero-image {
+    /* Photo by Marko Blazevic: https://www.pexels.com/photo/cute-gray-kitten-standing-on-a-wooden-flooring-774731/ */
+    width: 100%;
+    height: 500px;
+    background: url("../images/pexels-marko-blazevic-774731.jpg") no-repeat center center/cover;
+    position: relative;
+}
+
+/* Center the hero text */
+/* Helped by Akshat to remove loose text */
+.hero-text {
+    text-align: center;
+    color: orange;
+    font-weight: 600;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgba(59, 59, 59, 0.9);
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+/* Deleted unused lines of code */
+
+/* Spacing for sections */
+.spacing {
+    margin: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container styles for main content */
+.container {
+    text-align: center;
+    color: rgb(255, 179, 39);
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgba(59, 59, 59, 0.9);
+}
+
+/* Deleted unused code */
+
+.container>p {
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: black;
+    background-color:orange
+}
+
+
+/* Edit h2 heading of pros and cons list - border is responsive and not fixed, like I would want it to be */
+#pro-h2 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: rgb(255, 179, 39);
+    /* Add Border around headings */
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgba(59, 59, 59, 0.9);
+}
+
+/* Extra container for pros and cons */
+.container-pro-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* Colored boxes for arguments */
+#pros {
+    margin: 10px;
+    background-color: rgb(144, 238, 144, 0.65);
+    color: black;
+}
+
+#cons {
+    margin: 10px;
+    background-color: rgba(255, 0, 0, 0.26);
+    color: black;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Attributes.html code */
+.attributes-head {
+    text-align: center;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 2rem;
+    color: rgb(255, 179, 39);
+    background-color: rgba(59, 59, 59, 0.9);
+}
+
+.attributes {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 5%;
+}
+
+/* make image size fill display */
+.attributes img {
+    width: 100%;
+}
+
+/* adding similar style borders for paragraphs as for the headers in index.html */
+.attributes p {
+    text-align: center;
+    padding: 5px;
+    border: 2px solid rgba(59, 59, 59, 1);
+    border-radius: 10px;
+    margin: 10px;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------ */
+
+/* Footer*/
+footer {
+    background-color: black;
+}
+
+/* CSS code taken from Love Running project (#social-networks, #social-networks i) */
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+#social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color: #ffffff;
+}
+
+/* End of footer from Love Running */
+
+/* Styles for the Survey */
+/* General styles */
+/* background class is used by attributes.html as well */
+.background {
+    background-image: none;
+    background-color: rgba(59, 59, 59, 0.3);
+}
+
+/* Styling Heading element */
+#form1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+}
+
+#form1 h1 {
+    padding-bottom: 1rem;
+}
+
+#form p {
+    padding-bottom: 10px;
+}
+
+/* General user info */
+#form2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Styling written text */
+#form3 h3,
+#form4 h3,
+#form6 h3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+}
+
+#form5 h3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-top: 15px;
+}
+
+#form5 p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+/* Styling for radio buttons with grid */
+#form3 div,
+#form4 div,
+#form6 div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 20%;
+    padding-right: 20%;
+    margin-bottom: 1rem;
+}
+
+/* First use of grid */
+/* Under 413px screen width the radio buttons change size for dorm 5-1 */
+#form5-1 div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 15%;
+    margin-bottom: 1rem;
+}
+
+/* Putting the labels into the center of their grid */
+#form3 label,
+#form4 label,
+#form6 label {
+    display: flex;
+    justify-content: center;
+}
+
+#form7 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.bottom {
+    padding-bottom: 20px !important;
+}
+
+#padbottom {
+    padding-bottom: 20px !important;
+}
+
+/* Padding for buttons */
+#form8 {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* Media query: landscape phones (576px and more) */
+@media screen and (min-width: 576px) {
+
+    /* Attributes */
+    .attributes {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: masonry;
+        padding: 4%;
+        gap: 2.5%;
+    }
+    #form1 h1 {
+        padding-top: 4rem;
+    }
+    #form-size {
+        max-width: 80%;
+        display: inline-block;
+        margin: auto;
+    }
+}
+
+/* Media query: tablets and larger (768px and more) */
+@media screen and (min-width: 768px) {
+
+    /* Hero image */
+    .hero-image {
+        height: 700px;
+    }
+
+    .hero-text>h2 {
+        margin-top: 300px;
+    }
+
+    /* Adjust background picture */
+    main {
+        background: url("../images/sincerely-media-hbOpyBjUBjc-unsplash.jpg") no-repeat center 100px/cover;
+    }
+
+    /* Adjust container width */
+    .container {
+        width: 600px;
+    }
+
+    /* Make the Pros and Cons section responsive */
+    .container-pro-con {
+        display: flex;
+        flex-direction: row;
+        width: 600px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        gap: 1rem;
+        position: relative;
+        margin: auto;
+    }
+
+    #pros {
+        /* Alan from the Tutor team helped me fix the heigh difference between pros and cons */
+        height: 306px;
+        line-height: 26px;
+    }
+
+    /* Pictures from attributes side */
+    .attributes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: masonry;
+        padding: 3%;
+        gap: 2.5%;
+    }
+
+    /* Media query for survey.html */
+    #form1 h1 {
+        padding-bottom: 1rem;
+    }
+    #form-size {
+        max-width: 50%;
+        display: inline-block;
+        margin: auto;
+    }
+    #form5-1 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding-left: 10%;
+        padding-right: 10%;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Media query: large devices (992px and more) */
+@media screen and (min-width: 992px) {
+    /* Header */
+    header {
+        padding: 10px 20px 5px 10px;
+    }
+    header > nav {
+        display: block;
+        position: relative;
+        width: fit-content;
+        padding-right: 5%;
+        top: 0;
+        box-shadow: none;
+    }
+    .nav-box-label {
+        display: none;
+    }
+    #nav-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-left: 2rem;
+        font-size: 150%;
+    }
+
+    /* Hero image */
+    .hero-image {
+        height: 800px;
+    }
+
+    .hero-text>h2 {
+        margin-top: 350px;
+    }
+
+    main {
+        background: url("../images/sincerely-media-hbOpyBjUBjc-unsplash.jpg") no-repeat center 150px/cover;
+    }
+
+    /* Adjust container width */
+    .container {
+        width: 900px;
+    }
+
+    /* Pros and cons Container */
+    .container-pro-con {
+        display: flex;
+        flex-direction: row;
+        width: 900px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        gap: 1rem;
+        position: relative;
+        margin: auto;
+    }
+
+    /* hard coding the size of pros and cons to make them alway the same */
+    #pros {
+        height: 280px;
+        width: 413px;
+        line-height: 31px;
+    }
+
+    #cons {
+        height: 280px;
+        width: 413px;
+    }
+
+    /* styling favourite cat form for bigger screens */
+    /* Media query for survey.html */
+    #form1 h1 {
+        padding-top: 100px;
+        padding-bottom: 2rem;
+    }
+    #form5-1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Footer */
+    /* Move icons closer together */
+    #social-networks {
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+}
+
+/* Media query: desktop (1200px and more) */
+
+/* Between 1200px and 1250px the hero doesn't fill out the full screen, "pros and cons" are not evenly spaced between 1200px and 1300px */
+@media screen and (min-width: 1200px) {
+
+    /* Hero image */
+    .hero-image {
+        height: 1200px;
+    }
+
+    .hero-text {
+        font-size: 150%;
+    }
+
+    .hero-text>h2 {
+        margin-top: 550px;
+    }
+
+    /* On some devices (e.g. iPad air) arrows would be beneficial for horizontal alignment (1180px) */
+    /* Set scroll indicator (arrow) properties */
+    .hide-text {
+        display: flex;
+        justify-content: center;
+        padding: 200px;
+    }
+
+    /* Show arrow to indicate scrolling */
+    .arrow {
+        display: flex;
+        justify-content: center;
+        margin-top: -100px;
+        font-size: 400%;
+        color: orange;
+    }
+
+    .arrowtext {
+        color: orange;
+        font-size: 150%;
+        color: orange;
+        /* Add Border around headings */
+        padding: 5px;
+        border: 2px solid black;
+        border-radius: 10px;
+        background-color: rgba(59, 59, 59, 0.7);
+    }
+
+    /* Adjust background picture */
+    main {
+        /* optimized for FHD monitors */
+        background: url("../images/sincerely-media-hbOpyBjUBjc-unsplash.jpg") no-repeat center 300px/cover;
+    }
+
+    /* Pro and Con container */
+    .container-pro-con {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        gap: 1rem;
+        position: relative;
+        margin: auto;
+    }
+
+    #pros {
+        flex: 1;
+    }
+
+    #cons {
+        flex: 1;
+    }
+
+    /* Attributes media query */
+    .attributes {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: masonry;
+        padding: 2.5%;
+        gap: 2.5%;
+    }
+}
